@@ -3,7 +3,7 @@
 ## Introduction
 
   - try to summarize the solutions of leetcode problems in golang I have done.
-  - you can run test in each problem folder
+  - you can run tests in each problem folder
 
 ## Problems
 
