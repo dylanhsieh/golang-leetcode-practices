@@ -1,42 +1,27 @@
 # golang-leetcode-practices
 
 ## Introduction
-  - try to summarize the solutions of leetcode problems in golang I ve done
+
+  - try to summarize the solutions of leetcode problems in golang I have done.
+  - you can run test in each problem folder
 
 ## Problems
+
 ### easy
+
  title
-```
-Two Sum
-```
+
+ - Roman to Integer
+
 description
-```
-Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
+- Given a roman numeral, convert it to an integer.
 
-You can return the answer in any order.
+hint
+Since Roman numerals must be arranged from largest to smallest, if an arrangement is produced in the opposite order, the situation of the latter minus the former will occur. Therefore, we just need to process it in reverse order. If number[n-1] < number [n], then number[n-1] will be added, otherwise both will be added together.
 
+what you need to know in golang
 
-
-Example 1:
-
-Input: nums = [2,7,11,15], target = 9
-Output: [0,1]
-Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
-Example 2:
-
-Input: nums = [3,2,4], target = 6
-Output: [1,2]
-Example 3:
-
-Input: nums = [3,3], target = 6
-Output: [0,1]
-```
-solution hint
-```
-```
-
-syntax needed in golang
-```
-```
+- create byte index map for roman numerals
+ for loop from the end of the string
+ add/subtract the number
