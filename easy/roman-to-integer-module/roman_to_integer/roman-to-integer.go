@@ -1,6 +1,7 @@
 package roman_to_integer
 
 func RomanToInt(romanString string) int {
+	// Map to store roman numbers to int mapping
 	romanMap := map[byte]int{
 		'I': 1,
 		'V': 5,
@@ -13,26 +14,21 @@ func RomanToInt(romanString string) int {
 
 	sum := 0
 	biggestNumber := 0
-	// check if the are no roman symbol in string ?
-	// string convert to char array
+
+	// Iterate over the romanString backwards
 	for i := len(romanString) - 1; i >= 0; i-- {
-		// fmt.Printf("%d,", romanMap[romanString[i]])
-		// if current number >= biggest number then sum it up,
-		// and update biggest number
-		// otherwise, subtract it
+		// Get the current number
 		currentNumber := romanMap[romanString[i]]
 
+		// If the current number is greater than or equal to the biggest number, add it to the sum
+		// Otherwise, subtract it
 		if (currentNumber >= biggestNumber) || (biggestNumber == 0) {
 			sum += currentNumber
 			biggestNumber = currentNumber
 		} else {
 			sum -= currentNumber
 		}
-
 	}
 
-	// make an map to store roman numbers int mapping
-	// make sure the are in ordered
-	// fmt.Println(romanMap)
 	return sum
 }
